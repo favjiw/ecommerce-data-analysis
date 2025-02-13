@@ -27,6 +27,10 @@ if menu == "Sentimen":
     # Load dataset
     order_reviews = pd.read_csv("order_reviews_dataset.csv")
     
+    # Remove missing values and duplicates
+    order_reviews.dropna(subset=['review_comment_message'], inplace=True)
+    order_reviews.drop_duplicates(inplace=True)
+    
     # Function analisis sentimen
     def get_sentiment(text):
         return TextBlob(str(text)).sentiment.polarity
