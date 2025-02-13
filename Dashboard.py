@@ -244,7 +244,7 @@ elif menu == "Prediksi Penjualan":
 
 elif menu == "Pola Pembelian":
     st.title("10123091 - Alghifari Raspati")
-    st.title("Analisis Pola Pembelian")
+    st.title("Pola Hubungan antara Kategori Produk dan Metode Pembayaran")
     # === 1. Memuat Dataset ===
     product_df = pd.read_csv('products_dataset.csv')
     order_df = pd.read_csv('order_items_dataset.csv')
