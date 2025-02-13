@@ -244,7 +244,7 @@ elif menu == "Prediksi Penjualan":
 
 elif menu == "Pola Pembelian":
     st.title("10123091 - Alghifari Raspati")
-    st.title("Pola Hubungan antara Kategori Produk dan Metode Pembayaran")
+    st.title("Analisis Pola Pembelian")
     # === 1. Memuat Dataset ===
     product_df = pd.read_csv('products_dataset.csv')
     order_df = pd.read_csv('order_items_dataset.csv')
@@ -318,7 +318,7 @@ elif menu == "Pola Pembelian":
     # Konfigurasi sumbu dan judul
     ax.set_xlabel("Kategori Produk", fontsize=12)
     ax.set_ylabel("Confidence Level", fontsize=12)
-    ax.set_title("Aturan Asosiasi: Produk vs Pembayaran", fontsize=14)
+    ax.set_title("Pola Hubungan antara Kategori Produk dan Metode Pembayaran", fontsize=14)
 
     # Atur posisi label sumbu x
     ax.set_xticks(range(len(top_10_rules['antecedents'])))
